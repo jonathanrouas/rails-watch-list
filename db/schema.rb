@@ -35,7 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_025629) do
     t.string "ressources"
     t.string "title"
     t.string "overview"
-    t.string "poster_url"
+    t.string "poste_url"
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,13 +1,11 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :destroy]
+  before_action :set_list, only: [:edit, :show, :update]
 
   def index
     @lists = List.all
   end
 
-  def show
-    @bookmark = Bookmark.new
-  end
+  def show; end
 
   def new
     @list = List.new
@@ -15,17 +13,21 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-
     if @list.save
-      redirect_to @list, notice: 'List was successfully created.'
+      redirect_to list_path(@list)
     else
       render :new
     end
   end
 
-  def destroy
-    @list.destroy
-    redirect_to lists_path
+  def edit; end
+
+  def update
+    if @list.update(list_params)
+      redirect_to list_path(@list)
+    else
+      render :new
+    end
   end
 
   private
