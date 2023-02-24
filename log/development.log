@@ -1,0 +1,1733 @@
+  [1m[35m (243.0ms)[0m  [1m[35mCREATE DATABASE "rails_watch_list_development" ENCODING = 'unicode'[0m
+  [1m[35m (50.4ms)[0m  [1m[35mCREATE DATABASE "rails_watch_list_test" ENCODING = 'unicode'[0m
+  [1m[35m (22.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-21 01:25:46.757959"], ["updated_at", "2023-02-21 01:25:46.757959"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (19.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_watch_list_test"[0m
+  [1m[35m (45.1ms)[0m  [1m[35mCREATE DATABASE "rails_watch_list_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-21 01:25:49.341332"], ["updated_at", "2023-02-21 01:25:49.341332"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-02-21 01:25:49.346279"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "58addd46498439b0246039134434c38aae6c70d3"], ["created_at", "2023-02-21 01:25:49.350512"], ["updated_at", "2023-02-21 01:25:49.350512"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20230221014131)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.6ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221014131"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBookmarks (20230221014202)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (7.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221014202"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLists (20230221014216)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "lists" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221014216"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (12.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_watch_list_development"[0m
+  [1m[35m (11.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_watch_list_test"[0m
+  [1m[35m (55.8ms)[0m  [1m[35mCREATE DATABASE "rails_watch_list_development" ENCODING = 'unicode'[0m
+  [1m[35m (44.3ms)[0m  [1m[35mCREATE DATABASE "rails_watch_list_test" ENCODING = 'unicode'[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20230221021419)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "title" character varying, "overview" character varying, "poster_url" character varying, "rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221021419"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLists (20230221021612)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "lists" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221021612"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBookmarks (20230221021658)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" bigserial primary key, "comment" character varying, "movie_id" integer, "list_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221021658"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-21 02:20:08.651634"], ["updated_at", "2023-02-21 02:20:08.651634"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBookmarks (20230221021658)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE "bookmarks"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230221021658"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBookmarks (20230221021658)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLists (20230221021612)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "lists"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230221021612"]]
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLists (20230221021612)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "lists" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221021612"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBookmarks (20230221021658)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" bigserial primary key, "comment" character varying, "movie_id" bigint NOT NULL, "list_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_630f44bd39"
+FOREIGN KEY ("movie_id")
+  REFERENCES "movies" ("id")
+, CONSTRAINT "fk_rails_29c05dc16c"
+FOREIGN KEY ("list_id")
+  REFERENCES "lists" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_movie_id" ON "bookmarks" ("movie_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_list_id" ON "bookmarks" ("list_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221021658"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBookmarks (20230221021658)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (30.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_watch_list_development"[0m
+  [1m[35m (9.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_watch_list_test"[0m
+  [1m[35m (51.8ms)[0m  [1m[35mCREATE DATABASE "rails_watch_list_development" ENCODING = 'unicode'[0m
+  [1m[35m (39.2ms)[0m  [1m[35mCREATE DATABASE "rails_watch_list_test" ENCODING = 'unicode'[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20230221025358)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "ressources" character varying, "title" character varying, "overview" character varying, "poste_url" character varying, "rating" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221025358"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLists (20230221025515)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "lists" ("id" bigserial primary key, "ressources" character varying, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221025515"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBookmarks (20230221025629)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" bigserial primary key, "ressources" character varying, "comment" character varying, "movie_id" integer, "list_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221025629"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-21 02:56:48.691290"], ["updated_at", "2023-02-21 02:56:48.691290"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBookmarks (20230221025629)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mDROP TABLE "bookmarks"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230221025629"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBookmarks (20230221025629)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" bigserial primary key, "comment" text, "list_id" bigint NOT NULL, "movie_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_29c05dc16c"
+FOREIGN KEY ("list_id")
+  REFERENCES "lists" ("id")
+, CONSTRAINT "fk_rails_630f44bd39"
+FOREIGN KEY ("movie_id")
+  REFERENCES "movies" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_list_id" ON "bookmarks" ("list_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_movie_id" ON "bookmarks" ("movie_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221025629"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBookmarks (20230221025629)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "bookmarks"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230221025629"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBookmarks (20230221025629)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "bookmarks" ("id" bigserial primary key, "comment" text, "list_id" bigint NOT NULL, "movie_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_29c05dc16c"
+FOREIGN KEY ("list_id")
+  REFERENCES "lists" ("id")
+, CONSTRAINT "fk_rails_630f44bd39"
+FOREIGN KEY ("movie_id")
+  REFERENCES "movies" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_list_id" ON "bookmarks" ("list_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_bookmarks_on_movie_id" ON "bookmarks" ("movie_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221025629"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-02-21 04:55:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jonathanrouas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jonathanrouas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 586)
+Completed 200 OK in 16ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 4575)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-21 04:56:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/movies"):
+  
+Started GET "/movie" for 127.0.0.1 at 2023-02-21 04:56:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/movie"):
+  
+Started GET "/list" for 127.0.0.1 at 2023-02-21 05:00:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/list"):
+  
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:00:15 +0100
+  
+ActionController::RoutingError (uninitialized constant ListsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/bookmarks" for 127.0.0.1 at 2023-02-21 05:00:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/bookmarks"):
+  
+Started GET "/new" for 127.0.0.1 at 2023-02-21 05:02:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/" for 127.0.0.1 at 2023-02-21 05:24:10 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 49.0ms | Allocations: 2295)
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 2405)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms | Allocations: 7446)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze; @bookmarks.each do |bookmark| 
+                    ^^^^^):
+    1: <h1>Bookmarks</h1>
+    2: <% @bookmarks.each do |bookmark| %>
+    3:   <ul>
+    4:     <li><%= bookmark.comment %></li>
+    5:   </ul>
+  
+app/views/lists/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2023-02-21 05:32:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 63.6ms | Allocations: 5081)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 5191)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms | Allocations: 10232)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x000000000092e0>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 05:33:28 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 99)
+Started GET "/" for 127.0.0.1 at 2023-02-21 05:33:31 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 5602.2ms | Allocations: 281742)
+Completed 200 OK in 5603ms (Views: 5602.7ms | ActiveRecord: 0.0ms | Allocations: 282075)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 8866.7ms | Allocations: 313660)
+Completed 200 OK in 8870ms (Views: 8868.0ms | ActiveRecord: 0.0ms | Allocations: 314432)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-21 05:34:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 269)
+  Rendered layout layouts/application.html.erb (Duration: 130.0ms | Allocations: 43583)
+Completed 200 OK in 137ms (Views: 131.5ms | ActiveRecord: 0.0ms | Allocations: 48684)
+
+
+Started GET "/index" for 127.0.0.1 at 2023-02-21 05:34:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/new" for 127.0.0.1 at 2023-02-21 05:34:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/new" for 127.0.0.1 at 2023-02-21 05:34:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/show" for 127.0.0.1 at 2023-02-21 05:34:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/show"):
+  
+Started GET "/list" for 127.0.0.1 at 2023-02-21 05:34:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/list"):
+  
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:34:54 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 8637)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 8933)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-21 05:35:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/movies"):
+  
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:36:34 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 9069)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 9830)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-21 05:37:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/movies"):
+  
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:39:21 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4725)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4813)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 5590)
+
+
+  
+ActionView::Template::Error (undefined method `movie_path' for #<ActionView::Base:0x0000000000ad20>
+
+        <p class="btn-more-info">'.freeze;@output_buffer.append=( link_to "More info", movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                       ^^^^^^^^^^
+Did you mean?  view_paths):
+    14:       <p class="banner-title">AVENGERS COLLECTION</p>
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17:         <p class="btn-more-info"><%= link_to "More info", movie_path(@movie) %></p>
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+  
+app/views/lists/index.html.erb:17
+Started GET "/list" for 127.0.0.1 at 2023-02-21 05:39:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/list"):
+  
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:39:28 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 4246)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 4325)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 4574)
+
+
+  
+ActionView::Template::Error (undefined method `movie_path' for #<ActionView::Base:0x0000000000b2e8>
+
+        <p class="btn-more-info">'.freeze;@output_buffer.append=( link_to "More info", movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                       ^^^^^^^^^^
+Did you mean?  view_paths):
+    14:       <p class="banner-title">AVENGERS COLLECTION</p>
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17:         <p class="btn-more-info"><%= link_to "More info", movie_path(@movie) %></p>
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+  
+app/views/lists/index.html.erb:17
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:39:29 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 4246)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4325)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 4545)
+
+
+  
+ActionView::Template::Error (undefined method `movie_path' for #<ActionView::Base:0x0000000000b5b8>
+
+        <p class="btn-more-info">'.freeze;@output_buffer.append=( link_to "More info", movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                       ^^^^^^^^^^
+Did you mean?  view_paths):
+    14:       <p class="banner-title">AVENGERS COLLECTION</p>
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17:         <p class="btn-more-info"><%= link_to "More info", movie_path(@movie) %></p>
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+  
+app/views/lists/index.html.erb:17
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:39:48 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 4565)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4653)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 5388)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000b8b0>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: 
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:40:07 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (1.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:27
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2847)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.2ms | Allocations: 3592)
+
+
+  
+ActionView::Template::Error (Missing partial lists/_footer, application/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/jonathanrouas/code/jonathanrouas/rails-watch-list/app/views"
+  * "/home/jonathanrouas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4.2/app/views"
+
+Did you mean?  layouts/action_text/contents/content
+               action_text/contents/content
+               action_text/attachables/remote_image
+               active_storage/blobs/blob
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/missing_attachable):
+    55: 
+    56: 
+    57: <footer class="footer">
+    58:   <%= render 'footer' %>
+    59: </footer>
+  
+app/views/lists/index.html.erb:58
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:40:27 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:27
+  Rendered lists/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 9897)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.6ms | Allocations: 10670)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-21 05:50:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:27
+  Rendered lists/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1245)
+  Rendered layout layouts/application.html.erb (Duration: 153.3ms | Allocations: 44746)
+Completed 200 OK in 160ms (Views: 154.2ms | ActiveRecord: 0.8ms | Allocations: 49837)
+
+
+Started GET "/routes" for 127.0.0.1 at 2023-02-21 05:50:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:51:03 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:27
+  Rendered lists/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 633)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 9333)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.4ms | Allocations: 9632)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-21 05:51:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/movies"):
+  
+Started GET "/movies" for 127.0.0.1 at 2023-02-21 05:51:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/movies"):
+  
+Started GET "/movies" for 127.0.0.1 at 2023-02-21 05:53:48 +0100
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:2
+  Rendered movies/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 922)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 9698)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 1.0ms | Allocations: 11560)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2023-02-21 05:54:39 +0100
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (1.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/views/bookmarks/index.html.erb:2
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 898)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 9690)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 1.2ms | Allocations: 11947)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 05:54:51 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:27
+  Rendered lists/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 713)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 9496)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.6ms | Allocations: 11287)
+
+
+Started GET "/lists/index" for 127.0.0.1 at 2023-02-21 06:05:22 +0100
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/Lists_Controller.rb:34:in `set_list'
+Completed 404 Not Found in 39ms (ActiveRecord: 16.7ms | Allocations: 8014)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'=index):
+  
+app/controllers/concerns/Lists_Controller.rb:34:in `set_list'
+Started GET "/lists/new" for 127.0.0.1 at 2023-02-21 06:05:46 +0100
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1854)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1941)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5225)
+
+
+  
+ActionView::Template::Error (Missing partial lists/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/jonathanrouas/code/jonathanrouas/rails-watch-list/app/views"
+  * "/home/jonathanrouas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4.2/app/views"
+
+Did you mean?  layouts/action_text/contents/content
+               action_text/contents/content
+               action_text/attachables/remote_image
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/missing_attachable
+               active_storage/blobs/blob):
+    1: <%= render 'header' %>
+    2: 
+    3: <div class="container">
+    4:   <div class="">
+  
+app/views/lists/new.html.erb:1
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:28:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (1.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:27
+  Rendered lists/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 1245)
+  Rendered layout layouts/application.html.erb (Duration: 115.8ms | Allocations: 44716)
+Completed 200 OK in 132ms (Views: 126.8ms | ActiveRecord: 1.3ms | Allocations: 49806)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 08:32:14 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:27
+  Rendered lists/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 630)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 9335)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.9ms | Allocations: 9654)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2023-02-21 08:32:19 +0100
+Processing by BookmarksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bookmarks/index.html.erb within layouts/application
+  [1m[36mBookmark Load (1.2ms)[0m  [1m[34mSELECT "bookmarks".* FROM "bookmarks"[0m
+  ↳ app/views/bookmarks/index.html.erb:2
+  Rendered bookmarks/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 911)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 9686)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 1.2ms | Allocations: 11724)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 08:32:23 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.5ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:27
+  Rendered lists/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 563)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 9081)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.5ms | Allocations: 9359)
+
+
+Started GET "/lists/index" for 127.0.0.1 at 2023-02-21 08:34:46 +0100
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/Lists_Controller.rb:34:in `set_list'
+Completed 404 Not Found in 20ms (ActiveRecord: 6.6ms | Allocations: 5011)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'=index):
+  
+app/controllers/concerns/Lists_Controller.rb:34:in `set_list'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:41:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 26.5ms | Allocations: 5100)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 5210)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms | Allocations: 11133)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x00000000009448>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:52 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4582)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4671)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5438)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x000000000097e0>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:53 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4222)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4302)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 4555)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x00000000009b28>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:53 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4298)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4518)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x00000000009df8>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:53 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4298)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4518)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000a0c8>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:53 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4298)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4518)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000a398>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:54 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4298)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4648)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000a668>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:54 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4298)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4698)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000a938>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:54 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4298)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4630)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000ac08>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:54 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4460)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 4693)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000aed8>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:54 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4222)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4302)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4558)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000b1f8>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:43:54 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4557)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4637)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5016)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000b2c0>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:48:25 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4581)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4669)
+Completed 500 Internal Server Error in 9ms (Allocations: 5392)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000b838>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:48:28 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4221)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4300)
+Completed 500 Internal Server Error in 8ms (Allocations: 4539)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000bb58>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:48:28 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4221)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4300)
+Completed 500 Internal Server Error in 10ms (Allocations: 4518)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000be28>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:48:28 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4298)
+Completed 500 Internal Server Error in 7ms (Allocations: 4516)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000c0f8>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:52:54 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4581)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4669)
+Completed 500 Internal Server Error in 13ms (Allocations: 5392)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000c418>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:52:54 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4492)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5505)
+Completed 500 Internal Server Error in 8ms (Allocations: 5873)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000c4e0>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:52:55 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4221)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4334)
+Completed 500 Internal Server Error in 7ms (Allocations: 4801)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000ca58>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:52:55 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4298)
+Completed 500 Internal Server Error in 8ms (Allocations: 4516)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000cd28>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:52:55 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4287)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4397)
+Completed 500 Internal Server Error in 7ms (Allocations: 4878)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000cda0>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:57:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 5100)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 5210)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms | Allocations: 11103)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x00000000009448>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17: <!--         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:58:05 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4583)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4672)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5439)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x00000000009808>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17:         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:58:06 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4222)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4302)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4555)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x00000000009b28>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17:         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:58:06 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4298)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4518)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x00000000009df8>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17:         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:58:06 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4298)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4663)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000a0c8>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17:         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:58:06 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4219)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4298)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 4518)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000a398>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17:         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:58:07 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4481)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4587)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 4971)
+
+
+  
+ActionView::Template::Error (undefined method `new_movie_path' for #<ActionView::Base:0x0000000000a460>
+
+        <p class="btn-add">'.freeze;@output_buffer.append=( link_to "Add movie", new_movie_path(@movie) );@output_buffer.safe_append='</p>
+                                                                                 ^^^^^^^^^^^^^^
+Did you mean?  new_list_path):
+    15:       <p class="banner-subtitle">All movies avaiable right now!</p>
+    16:       <div class="btn-infos">
+    17:         <p class="btn-add">Add to list</p> -->
+    18:         <p class="btn-add"><%= link_to "Add movie", new_movie_path(@movie) %></p>
+    19:         <p class="btn-more-info"><%= link_to "Add list", new_list_path(@bookmark) %></p>
+    20:       </div>
+    21:     </div>
+  
+app/views/lists/index.html.erb:18
+Started GET "/" for 127.0.0.1 at 2023-02-21 08:58:29 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:32
+  Rendered lists/_footer.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered lists/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1581)
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 44577)
+Completed 200 OK in 70ms (Views: 68.7ms | ActiveRecord: 0.6ms | Allocations: 45367)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2023-02-21 08:58:33 +0100
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_header.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered lists/_form.html.erb (Duration: 46.1ms | Allocations: 17014)
+  Rendered lists/new.html.erb within layouts/application (Duration: 46.9ms | Allocations: 17503)
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 25950)
+Completed 200 OK in 62ms (Views: 52.1ms | ActiveRecord: 3.7ms | Allocations: 31593)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2023-02-21 08:58:37 +0100
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered lists/_form.html.erb (Duration: 2.1ms | Allocations: 1929)
+  Rendered lists/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2056)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 10263)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 10559)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-21 09:10:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:32
+  Rendered lists/_footer.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered lists/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 1858)
+  Rendered layout layouts/application.html.erb (Duration: 86.4ms | Allocations: 45089)
+Completed 200 OK in 112ms (Views: 106.7ms | ActiveRecord: 0.8ms | Allocations: 51027)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2023-02-21 09:12:31 +0100
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_header.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered lists/_form.html.erb (Duration: 13.0ms | Allocations: 12245)
+  Rendered lists/new.html.erb within layouts/application (Duration: 25.8ms | Allocations: 12732)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 21060)
+Completed 200 OK in 40ms (Views: 30.3ms | ActiveRecord: 3.4ms | Allocations: 26735)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-21 09:48:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:32
+  Rendered lists/_footer.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered lists/index.html.erb within layouts/application (Duration: 23.3ms | Allocations: 1855)
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | Allocations: 45109)
+Completed 200 OK in 116ms (Views: 110.2ms | ActiveRecord: 0.8ms | Allocations: 51047)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-21 10:33:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:32
+  Rendered lists/_footer.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered lists/index.html.erb within layouts/application (Duration: 24.4ms | Allocations: 1855)
+  Rendered layout layouts/application.html.erb (Duration: 98.2ms | Allocations: 45517)
+Completed 200 OK in 129ms (Views: 119.2ms | ActiveRecord: 0.9ms | Allocations: 51455)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2023-02-21 10:33:30 +0100
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_header.html.erb (Duration: 0.5ms | Allocations: 95)
+  Rendered lists/_form.html.erb (Duration: 20.4ms | Allocations: 12300)
+  Rendered lists/new.html.erb within layouts/application (Duration: 21.8ms | Allocations: 12786)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 21115)
+Completed 200 OK in 39ms (Views: 27.8ms | ActiveRecord: 6.2ms | Allocations: 25008)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2023-02-21 10:33:33 +0100
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/_header.html.erb (Duration: 0.4ms | Allocations: 9)
+  Rendered lists/_form.html.erb (Duration: 3.3ms | Allocations: 1953)
+  Rendered lists/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2077)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 10287)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 10594)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 10:33:40 +0100
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/lists/index.html.erb:32
+  Rendered lists/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered lists/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 9316)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.4ms | Allocations: 9571)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-21 10:33:46 +0100
+Processing by MoviesController#index as HTML
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms | Allocations: 1662)
+
+
+  
+ActionController::MissingExactTemplate (MoviesController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/movies" for 127.0.0.1 at 2023-02-21 10:33:46 +0100
+Processing by MoviesController#index as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 525)
+
+
+  
+ActionController::MissingExactTemplate (MoviesController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE DATABASE "rails_watch_list_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "rails_watch_list_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8791485322053296205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-02-21 10:57:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jonathanrouas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jonathanrouas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 478)
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 3237)
+
+
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 10:57:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/lists"):
+  
+Started GET "/lists" for 127.0.0.1 at 2023-02-21 10:57:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/lists"):
+  
